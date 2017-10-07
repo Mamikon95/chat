@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        .panel {
+            max-height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="panel panel-default">
+        <div class="panel-heading">Чат</div>
+        <div class="panel-body">
+            <div class="col-xs-12">
+                <b>Mike: </b>
+                <p>Hello World</p>
+            </div>
+            <div class="col-xs-12">
+                <b>Arusia: </b>
+                <p>Hello Mike</p>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <label>Имя:</label>
+            <input type="text" class="form-control send-name">
+            <label>Сообщение:</label>
+            <input type="text" class="form-control send-text">
+            <button class="btn btn-success send-btn">Отправить</button>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io('http://localhost:3000/')
+
+        $('.send-btn').on('click',function() {
+            socket.emit('message',JSON.stringify({name : $('.send-name').val(),text:$('.send-text').val()}));
+        })
+
+        socket.on('new-message',function(data) {
+            var response = JSON.parse(data);
+            $('.panel-body').append(
+                '<div class="col-xs-12">' +
+                '                <b>' + response.name + ': </b>' +
+                '                <p>' + response.text + '</p>' +
+                '            </div>'
+            );
+        })
+    </script>
+</body>
+</html>

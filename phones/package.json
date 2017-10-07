@@ -1,0 +1,11 @@
+{
+  "name": "phones",
+  "version": "1.0.0",
+  "description": "Phone list",
+  "main": "phone.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mike Pric",
+  "license": "ISC"
+}
