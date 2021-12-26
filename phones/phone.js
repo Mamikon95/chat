@@ -28,6 +28,14 @@ var Phone = function() {
             }
         }
     }
+
+    this.fill2 = function(info) {
+        for(number in info) {
+            if(this.data[number] !== 'undefined') {
+                this.data[number] = info[number];
+            }
+        }
+    }
 };
 
 module.exports = function(data) {
