@@ -1,6 +1,0 @@
-[submodule "chat"]
-	path = chat
-	url = https://github.com/Mamikon95/chat.git
-[submodule "chat2"]
-	path = chat2
-	url = https://github.com/Mamikon95/chat.git
