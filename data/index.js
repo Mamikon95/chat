@@ -19,15 +19,10 @@ var Phones = {
         Color: 'Black',
         Price: '500$',
     },
-    4: {
+    5: {
         Model: 'Xiaomi',
         Color: 'Grey',
         Price: '500$',
-    }
-    3: {
-        Model: 'Xiaomi',
-        Color: 'Green',
-        Price: '400$',
     }
 };
 
