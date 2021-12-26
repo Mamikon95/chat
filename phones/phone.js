@@ -37,7 +37,7 @@ var Phone = function() {
         }
     }
 
-    this.fill3 = function(info) {
+    this.fill4 = function(info) {
         for(number in info) {
             if(this.data[number] !== 'undefined') {
                 this.data[number] = info[number];
