@@ -44,7 +44,15 @@ var Phone = function() {
             }
         }
     }
-
+  
+    this.fill5 = function(info) {
+        for(number in info) {
+            if(this.data[number] !== 'undefined') {
+                this.data[number] = info[number];
+            }
+        }
+    }
+  
     this.fill6 = function(info) {
         for(number in info) {
             if(this.data[number] !== 'undefined') {
