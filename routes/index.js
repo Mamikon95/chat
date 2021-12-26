@@ -23,5 +23,6 @@ exports.phone = function(req,res) {
         res.render('../view/chat');
     } else {
         res.send('Такого телефона не существует!!!!!');
+        res.send('Такого телефона не существует!!!!!');
     }
 };
