@@ -9,6 +9,11 @@ var Phones = {
         Color: 'Black',
         Price: '250$',
     },
+    2: {
+        Model: 'Xiaomi',
+        Color: 'Black',
+        Price: '500$',
+    },
 };
 
 exports.Phones = Phones;
